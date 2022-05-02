@@ -33,7 +33,6 @@ const dataWithoutTimeZone = dataWithTimeZone.map(datum => [datum[0].slice(0,19),
 schema[0].format ="%Y-%m-%dT%H:%M:%S" // remove the "%Z"
 const fusionTableWithoutTimeZone = new FusionCharts.DataStore().createDataTable(dataWithoutTimeZone, schema)
 
-// STEP 3 - Creating the JSON object to store the chart configurations
 const chartConfigs = {
     type: "timeseries", // The chart type
     width: "100%", // Width of the chart
@@ -59,8 +58,6 @@ const chartConfigs = {
         })
     },
 };
-
-// STEP 4 - Creating the DOM element to pass the react-fusioncharts component
 
 const App = () => <>
     <h2>Graph of incorrect results (default parsing)</h2>
