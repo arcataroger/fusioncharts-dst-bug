@@ -63,10 +63,10 @@ const App = () => <>
     <h2>Graph of incorrect results (default parsing)</h2>
     <ReactFC {...chartConfigs} />
 
-    <h2>Graph of correct results (time zones removed)</h2>
+    <h2>Graph of expected results (time zones removed)</h2>
     <ReactFC {...chartConfigs} dataSource={{...chartConfigs.dataSource, data: fusionTableWithoutTimeZone}} />
 
-    <h2>Table of correct results</h2>
+    <h2>Table of expected results</h2>
     <table style={{border: '1px solid black'}}>
         <thead>
         <tr>
